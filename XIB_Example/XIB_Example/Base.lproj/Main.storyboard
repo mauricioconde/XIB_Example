@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="XIB_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jlK-SG-bI9" customClass="CustomPopUp" customModule="XIB_Example" customModuleProvider="target">
+                                <rect key="frame" x="150" y="225" width="300" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="qKd-9g-mB9"/>
+                                    <constraint firstAttribute="width" constant="300" id="rSV-bN-Ddv"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="customTitle" value="Custom title"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K59-Kr-wrz">
+                                <rect key="frame" x="200" y="538" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3Ph-gc-t4g"/>
+                                    <constraint firstAttribute="width" constant="200" id="4kG-PF-Wk4"/>
+                                </constraints>
+                                <state key="normal" title="custom alert">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showCustomPopUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pvk-T7-jU0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="K59-Kr-wrz" secondAttribute="centerX" id="3eQ-xr-9mO"/>
+                            <constraint firstAttribute="centerX" secondItem="jlK-SG-bI9" secondAttribute="centerX" id="Efx-eU-EOH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="K59-Kr-wrz" secondAttribute="bottom" constant="32" id="MmW-xd-V74"/>
+                            <constraint firstAttribute="centerY" secondItem="jlK-SG-bI9" secondAttribute="centerY" id="vlN-Gy-VEO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="customPopUp" destination="jlK-SG-bI9" id="yhe-P6-ObW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
